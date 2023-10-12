@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="uriel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-11 05:28:37 p. m."/>
+        <attribute name="created" value="dXJpZWw7REVTS1RPUC03QTVFSDA1OzIwMjMtMTAtMTE7MDU6MDI6NDggcC4gbS47MzAwNA=="/>
+        <attribute name="edited" value="dXJpZWw7REVTS1RPUC03QTVFSDA1OzIwMjMtMTAtMTE7MDU6Mjg6MzcgcC4gbS47ODszMTI1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="year" type="Integer" array="False" size=""/>
+            <declare name="residuo" type="Integer" array="False" size=""/>
+            <output expression="&quot;introdusca el year&quot;" newline="True"/>
+            <input variable="year"/>
+            <assign variable="residuo" expression="year % 4"/>
+            <if expression="residuo = 0">
+                <then>
+                    <assign variable="residuo" expression="year % 100"/>
+                    <if expression="residuo = 0">
+                        <then>
+                            <assign variable="residuo" expression="year % 400"/>
+                            <if expression="residuo = 0">
+                                <then>
+                                    <output expression="&quot;es bisiesto&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;no es bisiesto&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;es bisiesto&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;no es year bisiesto&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
